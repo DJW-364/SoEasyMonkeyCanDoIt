@@ -9,9 +9,97 @@
   <style type="text/css">
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Apple Color Emoji'}
+    span.s2 {font: 12.0px 'Zapf Dingbats'}
   </style>
 </head>
 <body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Monkey Jungle Adventure&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1a472a;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#game-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #2c3e50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 10px rgba(0,0,0,0.5);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#output {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1a1a1a;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-height: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-y: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.controls {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(4, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #45a049;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.05);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button:active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(0.95);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.status-bar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #34495e;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.status-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #2c3e50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="game-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="status-bar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status-item"&gt;<span class="s1">❤️</span> Health: &lt;span id="health"&gt;100&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status-item"&gt;<span class="s1">🍌</span> Bananas: &lt;span id="bananas"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status-item"&gt;<span class="s1">🎵</span> Songs: &lt;span id="songs"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="output"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="game.handleChoice('l')"&gt;Left (L)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="game.handleChoice('r')"&gt;Right (R)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="game.handleChoice('s')"&gt;Straight (S)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="climbBtn" style="display:none;" onclick="game.handleChoice('u')"&gt;Climb Up (U)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="game.handleChoice('q')"&gt;Quit (Q)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
 <p class="p1">class Game {</p>
 <p class="p1"><span class="Apple-converted-space">    </span>constructor() {</p>
 <p class="p1"><span class="Apple-converted-space">        </span>this.health = 100;</p>
@@ -24,30 +112,40 @@
 <p class="p1"><span class="Apple-converted-space">            </span>...Array(3).fill('meet_friend'),</p>
 <p class="p1"><span class="Apple-converted-space">            </span>'golden_banana'</p>
 <p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Add keyboard controls</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('keydown', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const key = e.key.toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (['l', 'r', 's', 'u', 'q'].includes(key)) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.handleChoice(key);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize UI elements</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.healthElement = document.getElementById('health');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.bananasElement = document.getElementById('bananas');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.songsElement = document.getElementById('songs');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.climbBtn = document.getElementById('climbBtn');</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>print(text) {</p>
 <p class="p1"><span class="Apple-converted-space">        </span>const output = document.getElementById('output');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>output.textContent += text + '\n';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>output.innerHTML += text + '&lt;br&gt;';</p>
 <p class="p1"><span class="Apple-converted-space">        </span>output.scrollTop = output.scrollHeight;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>clearControls() {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('controls').innerHTML = '';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>addButton(text, action) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const btn = document.createElement('button');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>btn.textContent = text;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>btn.onclick = action;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('controls').appendChild(btn);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateUI() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.healthElement.textContent = this.health;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.bananasElement.textContent = this.bananas;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.songsElement.textContent = this.jungleSongs;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.climbBtn.style.display = this.canClimbUp ? 'block' : 'none';</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>async goldenBananaMiniGame() {</p>
 <p class="p1"><span class="Apple-converted-space">        </span>return new Promise((resolve) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.print("\n*** GOLDEN BANANA MINI-GAME ***");</p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.print("To win the golden banana, you must answer this riddle!");</p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.print("\nRiddle: What can you catch but not throw?");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.print("&lt;div class='minigame'&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.print("&lt;strong&gt;<span class="s1">🎉</span> GOLDEN BANANA CHALLENGE!&lt;/strong&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.print("Riddle: What can you catch but not throw?");</p>
 <p class="p2"><span class="Apple-converted-space">            </span></p>
 <p class="p1"><span class="Apple-converted-space">            </span>const options = {</p>
 <p class="p1"><span class="Apple-converted-space">                </span>"A": "A ball",</p>
@@ -56,136 +154,68 @@
 <p class="p1"><span class="Apple-converted-space">                </span>"D": "A shadow"</p>
 <p class="p1"><span class="Apple-converted-space">            </span>};</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.print("\nChoose your answer:");</p>
-<p class="p1"><span class="Apple-converted-space">            </span>for (const [key, value] of Object.entries(options)) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print(`${key}: ${value}`);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.clearControls();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>['A', 'B', 'C', 'D'].forEach(choice =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.addButton(choice, () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>if (choice === 'B') {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>this.print("\nCorrect! You win the golden banana!");</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>resolve(true);</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>this.print("\nWrong! Better luck next time.");</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>resolve(false);</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.print("&lt;div class='options'&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Object.entries(options).forEach(([key, value]) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.print(`&lt;button onclick="game.resolveMiniGame('${key}')"&gt;${key}: ${value}&lt;/button&gt;`);</p>
 <p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.print("&lt;/div&gt;");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.resolveMiniGame = (choice) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.querySelector('.minigame').remove();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (choice === 'B') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.print("&lt;span style='color: gold'&gt;<span class="s2">✔</span> Correct! You win the golden banana!&lt;/span&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resolve(true);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.print("&lt;span style='color: red'&gt;<span class="s1">❌</span> Wrong answer! Try again later.&lt;/span&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>resolve(false);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
 <p class="p1"><span class="Apple-converted-space">        </span>});</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>async start() {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>this.print("Welcome to Monkey Jungle Adventure!");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>this.print("In the heart of the jungle, a mischievous monkey named Mango lived.");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>this.print("Mango loved bananas more than anything, but one day, the jungle's banana trees began to wither away.");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>this.print("Determined to save his beloved bananas, Mango set out on an adventure to find the legendary Golden Banana.");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>this.print("This magical fruit was said to have the power to restore the jungle's fertility and bring back the lush banana trees.");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>this.print("Find the Golden Banana + 69 bananas total to save the forest and replant the trees!");</p>
-<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.print("<span class="s1">🐒</span> Welcome to Monkey Jungle Adventure!");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.print("<span class="s1">🌴</span> Find the Golden Banana + collect 69 bananas to save the forest!");</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
 <p class="p1"><span class="Apple-converted-space">        </span>while (this.health &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.updateUI();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
 <p class="p1"><span class="Apple-converted-space">            </span>if (this.bananas &gt;= 69 &amp;&amp; this.hasGoldenBanana) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print("\n\n*** VICTORY! ***");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print("You've collected 69 bananas AND found the Golden Banana!");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print("The jungle's fertility is restored! Banana trees are growing everywhere!");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print("Thanks for playing!");</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.print("&lt;h2 style='color: gold'&gt;<span class="s1">🎉</span> VICTORY! Jungle saved!&lt;/h2&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.print("&lt;img src='https://emojicdn.elk.sh/<span class="s1">🎮</span>' style='font-size: 48px'&gt;");</p>
 <p class="p1"><span class="Apple-converted-space">                </span>break;</p>
 <p class="p1"><span class="Apple-converted-space">            </span>}</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.print(`\nHealth: ${this.health} | Bananas: ${this.bananas} | Jungle Songs: ${this.jungleSongs}`);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>await this.showChoices();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>await new Promise(resolve =&gt; setTimeout(resolve, 100));</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
 <p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">        </span>if (this.health &lt;= 0) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.print("\nGame Over! Your health reached zero. Better luck next time!");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.print("&lt;h2 style='color: red'&gt;<span class="s1">💀</span> GAME OVER! Try again?&lt;/h2&gt;");</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>this.print(`\nFinal Score - Health: ${this.health}, Bananas: ${this.bananas}, Golden Banana Found: ${this.hasGoldenBanana ? 'Yes' : 'No'}`);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>async showChoices() {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>return new Promise((resolve) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.clearControls();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const choices = ['l', 'r', 's'];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (this.canClimbUp) choices.push('u');</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>choices.forEach(choice =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.addButton(choice.toUpperCase(), () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.handleChoice(choice);</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>resolve();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>this.addButton('Q', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print("Thanks for swinging through the jungle!");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.health = 0;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>resolve();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>async handleChoice(choice) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (choice === 'q') {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.health = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">        </span>this.canClimbUp = false;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>const event = this.events[Math.floor(Math.random() * this.events.length)];</p>
 <p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>switch(event) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>case 'snake':</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (this.jungleSongs &gt; 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.jungleSongs--;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.print("You encountered a sneaky snake! But you used a jungle song to scare it away. No damage taken!");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>const damage = Math.floor(Math.random() * 16) + 10;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.health -= damage;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.print(`You encountered a sneaky snake! You lost ${damage} health.`);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>case 'banana_tree':</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const reward = Math.floor(Math.random() * 5) + 1;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.bananas += reward;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print(`You found a banana tree! You picked ${reward} bananas.`);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>case 'banana_stash':</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const stashReward = Math.floor(Math.random() * 11) + 5;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.bananas += stashReward;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print(`You found another monkey's stash of bananas! You borrowed ${stashReward} bananas.`);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>case 'muddy_pit':</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const pitDamage = Math.floor(Math.random() * 11) + 5;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.health -= pitDamage;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print(`You fell into a muddy pit! You lost ${pitDamage} health.`);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>case 'golden_banana':</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print("\nYou found a golden banana! But first, you must complete a challenge to earn it!");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (await this.goldenBananaMiniGame()) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.bananas += 20;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.hasGoldenBanana = true;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.print("You earned the golden banana! +20 bananas!");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.print("You failed the challenge. No golden banana for you!");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>case 'meet_friend':</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const friends = ['kaa', 'baloo', 'wolf pack'];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const friend = friends[Math.floor(Math.random() * friends.length)];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (friend === 'kaa') {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.print("You met Kaa! He showed you how to climb higher into the trees.");</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.canClimbUp = true;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else if (friend === 'baloo') {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.jungleSongs++;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.print("You met Baloo! He taught you a jungle song. You can use it once to scare away a snake without taking damage.");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.health += 15;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>this.print("You met the Wolf Pack! They protected you and helped restore your health. +15 health!");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>default:</p>
-<p class="p1"><span class="Apple-converted-space">                </span>this.print("You swing for a while but nothing exciting happens.");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Handle game events (same as previous logic)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// ... [keep the existing switch/case logic] ...</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.updateUI();</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p1">}</p>
 <p class="p2"><br></p>
 <p class="p1">// Start the game</p>
 <p class="p1">const game = new Game();</p>
 <p class="p1">game.start();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+<p class="p2"><br></p>
 </body>
 </html>
